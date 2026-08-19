@@ -1,0 +1,66 @@
+/* ============================================================
+   Box Office — design tokens
+
+   Palette
+     bg / surface tiers   near-black charcoal with a warm undertone
+     gold                 marquee accent: available seats, primary actions
+     rose                 seats held by someone else
+     green                seats held by you, success states
+
+   Type
+     display  Bebas Neue      marquee headline energy, used sparingly
+     body     Inter           everything else
+     mono     JetBrains Mono  seat ids, prices, counters — ticket-stub feel
+
+   Spacing runs on a 4px step. Anything laid out by eye rather than by step
+   tends to drift once a second person edits the file.
+   ============================================================ */
+
+:root {
+  --bg: #131318;
+  --surface: #1c1c23;
+  --surface-2: #24242c;
+  --surface-3: #2e2e38;
+  --surface-4: #3a3a46;
+
+  --gold: #e8b34a;
+  --gold-bright: #f5c56a;
+  --gold-dim: #6b5327;
+  --gold-glow: rgba(232, 179, 74, 0.18);
+
+  --rose: #d15559;
+  --rose-dim: #4a2a2e;
+  --green: #47b483;
+  --green-dim: #1e4534;
+
+  --ink: #f5f1e8;
+  --ink-muted: #9b98a3;
+  --ink-faint: #6a6875;
+
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Bebas Neue', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-panel: 0 18px 44px -22px rgba(0, 0, 0, 0.7);
+  --shadow-lifted: 0 20px 48px rgba(0, 0, 0, 0.45);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Horizontal page inset: tight on a phone, generous on a desktop, without
+     a media query for every step in between. */
+  --page-inset: clamp(var(--space-4), 4vw, var(--space-6));
+}

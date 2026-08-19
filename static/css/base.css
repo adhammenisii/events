@@ -1,0 +1,170 @@
+/* Reset, page shell, and the controls shared by both pages. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  background-image:
+    radial-gradient(ellipse 1000px 560px at 50% -8%, var(--gold-glow), transparent 62%),
+    radial-gradient(ellipse 700px 400px at 88% 26%, rgba(232, 179, 74, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, p, figure {
+  margin: 0;
+}
+
+/* The hidden attribute only sets display:none at user-agent level, so any
+   author rule that sets display -- .field below, for one -- silently wins.
+   This keeps [hidden] meaning hidden. */
+[hidden] {
+  display: none !important;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------------- form controls ---------------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field > span,
+.field > label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.select,
+.text-input {
+  width: 100%;
+  padding: 10px var(--space-3);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.select {
+  cursor: pointer;
+  /* Native select arrows render light-on-light in a dark theme on some
+     platforms, so the control draws its own. */
+  appearance: none;
+  padding-right: var(--space-6);
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-muted) 50%),
+    linear-gradient(135deg, var(--ink-muted) 50%, transparent 50%);
+  background-position: right 18px center, right 13px center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.select:hover,
+.text-input:hover {
+  border-color: var(--surface-4);
+}
+
+.select:focus,
+.text-input:focus {
+  border-color: var(--gold-dim);
+  outline: none;
+  background: var(--surface-3);
+}
+
+.text-input::placeholder {
+  color: var(--ink-faint);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 11px var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button--primary {
+  background: var(--gold);
+  color: #22190a;
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--gold-bright);
+}
+
+.button--ghost {
+  background: transparent;
+  border-color: var(--surface-3);
+  color: var(--ink-muted);
+}
+
+.button--ghost:hover:not(:disabled) {
+  border-color: var(--surface-4);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

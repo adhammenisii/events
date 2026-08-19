@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Box Office — Seat Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/booking.css">
+</head>
+<body>
+
+<div class="page-header">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">BOX&nbsp;OFFICE</span>
+    </div>
+
+    <div class="topbar-controls">
+      <label class="field event-picker">
+        <span class="visually-hidden">Event</span>
+        <select class="select" id="event-select" aria-label="Choose an event"></select>
+      </label>
+
+      <div class="account">
+        <div class="account-details">
+          <span class="account-role">Booking as</span>
+          <span class="account-name" id="account-name">…</span>
+        </div>
+        <span class="account-avatar" id="account-initials" aria-hidden="true"></span>
+        <button type="button" class="button button--ghost" id="sign-out">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats-bar" aria-live="polite" aria-label="Live availability">
+    <div class="stat">
+      <span class="stat-value" id="stat-available">–</span>
+      <span class="stat-label">Available</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-booked">–</span>
+      <span class="stat-label">Booked</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-occupancy">–</span>
+      <span class="stat-label">Occupancy</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value stat-value--accent" id="stat-revenue">–</span>
+      <span class="stat-label">Revenue booked</span>
+    </div>
+    <div class="occupancy">
+      <div class="occupancy-track">
+        <div class="occupancy-fill" id="occupancy-fill"></div>
+      </div>
+      <span class="event-meta" id="event-meta"></span>
+    </div>
+  </section>
+</div>
+
+<main class="floor">
+  <div class="stage">
+    <div class="stage-arc"><span>STAGE</span></div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item"><i class="legend-swatch legend-swatch--available"></i>Available</span>
+    <span class="legend-item"><i class="legend-swatch legend-swatch--taken"></i>Booked</span>
+    <span class="legend-item"><i class="legend-swatch legend-swatch--mine"></i>Your booking</span>
+  </div>
+
+  <div class="seat-map" id="seat-map" aria-label="Seating chart">
+    <p class="placeholder">Loading seats…</p>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-icon" id="toast-icon"></span>
+  <span id="toast-message"></span>
+</div>
+
+<script type="module" src="/assets/js/booking-page.js"></script>
+</body>
+</html>

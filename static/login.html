@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Box Office</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/auth.css">
+</head>
+<body class="auth-page">
+
+<main class="auth-card">
+  <div class="auth-brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">BOX&nbsp;OFFICE</span>
+  </div>
+  <p class="auth-intro" id="auth-intro">Sign in to book seats.</p>
+
+  <p class="auth-error" id="auth-error" role="alert"></p>
+
+  <form class="auth-form" id="auth-form" novalidate>
+    <label class="field" id="name-field" hidden>
+      <span>Full name</span>
+      <input class="text-input" type="text" name="full_name" id="full-name"
+             autocomplete="name" placeholder="Nadia Rahman">
+    </label>
+
+    <label class="field">
+      <span>Email</span>
+      <input class="text-input" type="email" name="email" id="email"
+             autocomplete="email" placeholder="you@example.com" required>
+    </label>
+
+    <label class="field">
+      <span>Password</span>
+      <input class="text-input" type="password" name="password" id="password"
+             autocomplete="current-password" placeholder="••••••••" required>
+    </label>
+
+    <button class="button button--primary" type="submit" id="submit-button">Sign in</button>
+  </form>
+
+  <p class="auth-switch">
+    <span id="switch-prompt">No account yet?</span>
+    <button type="button" class="link-button" id="switch-mode">Create one</button>
+  </p>
+
+  <section class="demo-accounts" id="demo-accounts" hidden>
+    <h2 class="demo-accounts-title">Sample accounts</h2>
+    <div class="demo-account-list" id="demo-account-list"></div>
+    <p class="demo-hint" id="demo-hint"></p>
+  </section>
+</main>
+
+<script type="module" src="/assets/js/login.js"></script>
+</body>
+</html>

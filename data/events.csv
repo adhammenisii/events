@@ -1,0 +1,21 @@
+event_id,name,category,venue,city,event_date,event_time,total_seats,base_price
+EVT00001,Theater Night #1,Conference,Metro Theater,Austin,2027-01-22,16:00,100,127.34
+EVT00002,Theater Night #2,Theater,Grand Arena,Boston,2026-11-17,18:00,150,172.97
+EVT00003,Conference Night #3,Concert,Skyline Hall,Denver,2026-11-06,19:45,200,165.72
+EVT00004,Sports Night #4,Theater,Central Park,Chicago,2026-10-18,17:45,50,52.32
+EVT00005,Sports Night #5,Theater,Central Park,New York,2026-12-25,16:00,100,75.56
+EVT00006,Conference Night #6,Concert,Skyline Hall,Seattle,2026-10-19,18:30,50,118.49
+EVT00007,Conference Night #7,Sports,Metro Theater,Denver,2026-09-12,16:15,200,232.42
+EVT00008,Concert Night #8,Theater,Metro Theater,Austin,2026-12-13,14:00,100,88.64
+EVT00009,Comedy Night #9,Comedy,Metro Theater,Boston,2026-09-13,17:45,150,102.65
+EVT00010,Conference Night #10,Theater,Skyline Hall,Miami,2026-10-06,19:45,200,77.55
+EVT00011,Concert Night #11,Theater,Metro Theater,Miami,2026-11-11,16:15,200,136.45
+EVT00012,Sports Night #12,Comedy,Central Park,Austin,2026-08-31,17:00,50,143.34
+EVT00013,Concert Night #13,Sports,Metro Theater,Boston,2027-01-20,12:00,200,130.64
+EVT00014,Theater Night #14,Comedy,Metro Theater,Miami,2026-08-26,15:45,150,239.68
+EVT00015,Comedy Night #15,Concert,Central Park,New York,2026-10-05,20:30,200,249.42
+EVT00016,Conference Night #16,Concert,Grand Arena,Seattle,2026-09-17,21:30,50,228.27
+EVT00017,Theater Night #17,Concert,Riverside Stadium,Austin,2026-11-09,16:15,50,79.94
+EVT00018,Comedy Night #18,Sports,Skyline Hall,Chicago,2026-08-26,19:45,200,164.43
+EVT00019,Conference Night #19,Comedy,Skyline Hall,Chicago,2026-12-02,20:30,100,128.4
+EVT00020,Conference Night #20,Theater,Central Park,Chicago,2026-08-24,17:30,50,247.22

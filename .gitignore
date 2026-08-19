@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+
+# Created at runtime: the SQLite database and its WAL sidecars.
+instance/
+
+# Mirror of seat state for the Part 1 storage layout; regenerated on startup.
+storage_output/

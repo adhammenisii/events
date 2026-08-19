@@ -1,0 +1,151 @@
+/* Sign-in page. */
+
+.auth-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-6) var(--page-inset);
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  padding: clamp(var(--space-5), 5vw, var(--space-7));
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  animation: rise-in 0.4s var(--ease-out) backwards;
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.auth-brand .brand-mark {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--gold);
+}
+
+.auth-brand .brand-name {
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: 0.11em;
+  line-height: 1;
+  padding-top: 3px;
+}
+
+.auth-intro {
+  margin-bottom: var(--space-6);
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--ink-muted);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.auth-form .button {
+  margin-top: var(--space-1);
+  width: 100%;
+}
+
+.auth-error {
+  display: none;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(209, 85, 89, 0.1);
+  border: 1px solid var(--rose);
+  border-radius: var(--radius-md);
+  color: var(--rose);
+  font-size: 13px;
+}
+
+.auth-error--visible {
+  display: block;
+}
+
+.auth-switch {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--surface-3);
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.link-button {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link-button:hover {
+  color: var(--gold-bright);
+}
+
+/* ---------------- seeded demo accounts ---------------- */
+
+.demo-accounts {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border: 1px dashed var(--surface-4);
+  border-radius: var(--radius-md);
+}
+
+.demo-accounts-title {
+  margin-bottom: var(--space-3);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.demo-account-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.demo-account {
+  padding: 5px var(--space-3);
+  background: var(--surface-3);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.demo-account:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold-bright);
+}
+
+.demo-hint {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
